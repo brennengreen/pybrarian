@@ -40,6 +40,3 @@ class Book:
     def getBookInfo(self):
         msg = "The title of this book is {0}, and there are {1} pages to read!"
         return (msg.format(self.book_title, self.page_count))
-
-tfios = Book("The Fault in Our Stars", None)
-print(tfios.get_book_pages())
