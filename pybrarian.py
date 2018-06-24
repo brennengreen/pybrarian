@@ -14,8 +14,6 @@ class Book:
             search = wiki.search(title,1)
             refined_title = search[0]
             self.wiki_page = wiki.WikipediaPage(refined_title)
-
-
         try:
             self.page_count = pages
         except:
@@ -36,7 +34,6 @@ class Book:
                 except ValueError:
                     self.page_count = count
                     return count
-
                 if count == None:
                     count = page_html[next_index]
                 else:
