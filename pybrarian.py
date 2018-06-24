@@ -50,6 +50,3 @@ class Book:
             self.get_book_pages()
         msg = "The title of this book is {0}, and there are {1} pages to read!"
         return (msg.format(self.book_title, self.page_count))
-
-x = Book("The Catcher in the Rye", None)
-print(x.get_book_info())
