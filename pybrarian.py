@@ -9,7 +9,8 @@ class Book:
         
     def get_refined_title(self):
         search = wiki.search(self.book_title,1)
-        refined_title = str(search[0])
+        refined_title = search[0]
+        #This returns a pylint error saying refined_title is an instance of 'list', I have no clue why if you know please discord me @Drey#0001
         if refined_title.find("book") > -1 or refined_title.find("novel") > -1:
             self.book_title = refined_title
             print(refined_title)
@@ -18,7 +19,7 @@ class Book:
             search = wiki.search(self.book_title, 10)
             for i in range(len(search)):
                 if search[i].find("book") > -1 or search[i].find("novel") > -1:
-                    refined_title = str(search[i])
+                    refined_title = search[i]
                     self.book_title = refined_title
                     print(refined_title)
                     return refined_title
